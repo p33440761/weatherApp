@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  background: linear-gradient(to bottom, #323232 0%, #3f3f3f 40%, #1c1c1c 150%),
+    linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(0, 0, 0, 0.25) 200%
+    );
+  background-blend-mode: multiply;
+}
+.container {
+  width: 80vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 80vh;
+  background: url("https://source.unsplash.com/1600x900/?landscape") center
+    center / cover;
+  background-repeat: no-repeat;
+  font-size: 120%;
+  margin: 5rem auto;
+  box-shadow: 0 1rem 2rem rgb(0 0 0 / 30%);
+  /* border-radius: 1rem; */
+  position: relative;
+}
+/* -------------------------------------------------------------------------- */
+.date_wrapper {
+  position: absolute;
+  top: 75%;
+  left: 0;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+  width: 350px;
+  padding-left: 2rem;
+  backdrop-filter: blur(0.1rem);
+}
+.date_time {
+  font-size: 64px;
+}
+
+/* ----------------------------------------------------------------------------- */
+.card {
+  width: 100%;
+  max-width: 500px;
+  /* border-radius: 30px; */
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1rem 2rem rgb(0 0 0 / 30%);
+  backdrop-filter: blur(0.9rem);
+  /* margin: 1rem; */
+  color: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input.search-bar {
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 24px;
+  color: #fff;
+  font-size: 105%;
+  width: calc(100% - 50px);
+  transition: 0.5s;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1rem 2rem rgb(0 0 0 / 20%);
+}
+input.search-bar:focus {
+  background: rgba(255, 255, 255, 0.4);
+}
+input::placeholder {
+  color: rgb(70, 70, 70);
+}
+button {
+  margin: 0.5rem;
+  border-radius: 50%;
+  border: none;
+  height: 44px;
+  width: 44px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1rem 2rem rgb(0 0 0 / 20%);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+button:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+h1.temp {
+  margin-bottom: 0.4rem;
+}
+.description {
+  text-transform: capitalize;
+  margin-left: 8px;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+.weather.loading {
+  visibility: hidden;
+  min-height: 20px;
+  position: relative;
+}
+.weather.loading::after {
+  content: "Loading....";
+  color: #fff;
+  position: absolute;
+  visibility: visible;
+  top: 0;
+  left: 20px;
+}
+/* ------------------------------------- */
+.weather-forecast {
+  display: flex;
+  margin-top: 1rem;
+}
+.weather-forecast-item {
+  background: rgba(255, 255, 255, 0.2);
+  margin: 0.3rem;
+  border-radius: 0.6rem;
+  text-align: center;
+  width: 100%;
+  color: #333;
+  box-shadow: 0 1rem 2rem rgb(0 0 0 / 20%);
+}
+.weather-forecast-item .temp {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.weather-forecast-item .day {
+  margin-top: 0.5rem;
+}
+/* -----------------hourly---------------------------- */
+.hourly_wrap {
+  display: flex;
+  background: rgba(255, 255, 255, 0.2);
+  width: 500px;
+  transform: translateX(-32px);
+  justify-content: space-around;
+  padding: 0.2rem;
+}
